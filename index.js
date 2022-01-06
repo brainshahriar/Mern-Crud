@@ -1,12 +1,11 @@
 import express from 'express'
 import mongoose from 'mongoose'
+import route from './route/route.js'
 
 const app=express();
-const route=express.Router();
 
-route.get('/',(request,response)=>{
-    response.status(200).json('Hello shahriar');
-})
+
+
 app.use('/users',route);
 
 const PORT = 9000;
