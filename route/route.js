@@ -1,6 +1,5 @@
 import express from 'express'
+import { getUser } from '../controller/user-controller.js';
 const route=express.Router();
-route.get('/',(request,response)=>{
-    response.status(200).json('Hello shahriar');
-})
+route.get('/',getUser)
 export default route;
